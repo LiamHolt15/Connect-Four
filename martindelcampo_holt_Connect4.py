@@ -19,7 +19,7 @@ import random  # Import the random library
 # ================================= Functions here ====================================
 
 
-# Alvaro 
+
 # Function that checks if the CPU won the game.          
 def check_lose(array, lose_type):
     ## COLUMN/ VERTICAL CHECK
@@ -88,7 +88,7 @@ def check_lose(array, lose_type):
                 lose_type.clear()# Clear the list, no lose to add.
     return lose # If all 4 loops, produced a False Lose value, return lose.
 
-# Alvaro
+
 # Function that checks if user won game.
 def check_win(array, win_type):
      ## COLUMN/ VERTICAL CHECK
@@ -153,7 +153,6 @@ def check_win(array, win_type):
     return win # If all 4 loops, produced a False win value, return win.
 
 
-# Alvaro
 # get users desired column that they would like to place a peice
 def ask_userchoice():
     # get user input, desired column or quit the game and assign to choice
@@ -162,7 +161,7 @@ def ask_userchoice():
     return choice
 
 
-# Alvaro
+
 # check the users choice, if the move is in the movelist
 def check_userchoice(move, movelist):
     check = move in movelist  # check if move is in the list movelist
@@ -178,7 +177,7 @@ def check_userchoice(move, movelist):
     return invalid_choice # Return boolean of invalid_choice.
 
 
-# Alvaro
+
 # Assign a number used in lists from the grid based on user input column choice.
 def find_pos(move):
     if move == 'A' or move == 'a':
@@ -202,7 +201,7 @@ def find_pos(move):
     return pos
 
 
-# Alvaro
+
 # check if the bottom most row in the column already has a piece in it.
 def check_move(pos, gridlist, row):
     row = int(row)
@@ -215,7 +214,7 @@ def check_move(pos, gridlist, row):
     return spot_full 
 
 
-# Alvaro
+
 # check if the column chosen is completely full.
 def check_fullcol(gridlist, pos):
     # pos 0 in list repr. the top row, so if 1 or 2 is in pos, then it's full.
@@ -229,7 +228,7 @@ def check_fullcol(gridlist, pos):
         return spot_full
 
 
-# Alvaro
+
 # create random cpu move.
 def get_cpumove(moves):
     # generates a random move from the list of moves possible.
@@ -238,7 +237,7 @@ def get_cpumove(moves):
     print('The computer moved in the ' + str.upper(choice) + ' row.')
     return choice
 
-# Liam
+
 # Function for messages if user loses the game.
 def print_lose_msg(lose, lose_type):
     # User did lose.
@@ -270,7 +269,7 @@ def print_lose_msg(lose, lose_type):
     else: # Prints nothing
         print()
         
-# Liam 
+ 
 # Function for messages if user wins game.
 def print_win_msg(win, win_type):
    # User won game. 
@@ -302,7 +301,7 @@ def print_win_msg(win, win_type):
     else: # Prints nothing.
         print()
 
-# Liam
+
 # display opening message
 def opening_message():
     # print opening message
@@ -312,7 +311,7 @@ def opening_message():
     print('')
 
 
-# Liam
+
 # display menu options
 def showMenu():
     # print menu options
@@ -325,7 +324,7 @@ def showMenu():
     print(' ')
 
 
-# Liam
+
 # get users choice to either start, quit or see the help menu
 def getChoice():
     try: # exception handling 
@@ -335,7 +334,7 @@ def getChoice():
         print('Invalid Option! Try Again...')
 
 
-# Liam
+
 # show help menu
 def showHelp():
     print('')
@@ -351,7 +350,7 @@ def showHelp():
     print('  - refer to martindelcampo_holt_CA_readme.txt for more info')  # refer to additional read me
     print('')   # print blankline 
 
-# Liam
+
 # display welcome message - connect four
 def display_wlcome():
     # print ascii title
@@ -367,7 +366,7 @@ def display_wlcome():
     print('###############################################################')
 
 
-# Liam
+
 # create the board 6 by 7
 def create_board(board):
     # append to the board in range of 6 (create board)
@@ -375,7 +374,6 @@ def create_board(board):
         board.append([' '] * 9)
 
 
-# Liam
 # print the board
 def print_board(board):
     print('')  # print a blank line
@@ -385,14 +383,14 @@ def print_board(board):
     print('') # print a blank line  
 
 
-# Liam
+
 # add player peice to the board
 def add_player_peice(grid, user_pos, row_pos, board):
     grid[user_pos][row_pos] = 1  # Grid used for recursion add a num
     board[row_pos][user_pos + 1] = 'o'  # Board printed for user, add an o
 
 
-# Liam
+
 # add cpu peice to the board
 def add_comp_peice(grid, cpu_pos, row_pos, board):
     grid[cpu_pos][row_pos] = 2  # Grid used for recursion add a num
