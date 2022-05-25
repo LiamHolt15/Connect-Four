@@ -4,13 +4,9 @@ Connect Four, Text based in Python
 ********************************************************************************
 AUTHORS: Liam Holt and Alvaro Martin del Campo
 
-CLASS: ICS3U1-01
-
 DATE: December 16th, 2019
 
 PROGRAM VERSION: 2.4 [Final Version]
-
-QUESTION: Culminating Activity
 
 PYTHON VERSION: Created with Python 3.7.3.
 
